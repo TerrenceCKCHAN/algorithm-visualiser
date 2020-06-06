@@ -1,1 +1,0 @@
-Hello Everyone, this is a project to visualise algorithms for education purposes
