@@ -3,8 +3,10 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      This is an algorithm visualiser for education purposes
+    <div>
+      <div className="App">
+        This is an algorithm visualiser for education purposes
+      </div>
     </div>
   );
 }
