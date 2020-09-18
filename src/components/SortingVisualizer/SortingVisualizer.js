@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 function SortingVisualizer() {
     const[array, setArray] = useState([]);
 
-    useEffect(() => setArray(resetArray()))
+    useEffect(() => setArray(resetArray()), []);
 
     return (
         <>
