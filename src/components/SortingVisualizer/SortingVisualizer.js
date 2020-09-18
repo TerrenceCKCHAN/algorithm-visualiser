@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './SortingVisualizer.css';
 
 function SortingVisualizer() {
     const[array, setArray] = useState([]);
@@ -10,21 +11,26 @@ function SortingVisualizer() {
             <h1>
                 Visualizer
             </h1>
+            <div className='array-container'>
             { 
                 array.map((value, idx) => {
                     return (
-                    <div className="array-columns" key={idx}>
-                        {value}
+                    <div 
+                        className="array-column" 
+                        key={idx}
+                        style={{height: `${value}px`}}
+                    >
                     </div>
                     )
                 })
             }  
+            </div>
         </>
     );
 }
 
 function resetArray() {
-    const array = Array.from({length: 40}, () => Math.floor(Math.random() * 1000));
+    const array = Array.from({length: 300}, () => Math.floor(Math.random() * 1000));
     console.log(array);
     return array;
 }
