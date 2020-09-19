@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './SortingVisualizer.css';
 
 function resetArray() {
-  const array = Array.from({ length: 300 }, () => Math.floor(Math.random() * 1000));
+  const array = Array.from({ length: 200 }, () => Math.floor(Math.random() * 500));
   console.log(array);
   return array;
 }
@@ -27,7 +27,12 @@ function SortingVisualizer() {
             />
           ))
         }
+        <button onClick={() => (setArray(resetArray()))}
+        >
+          New Array
+        </button>
       </div>
+
     </div>
   );
 }
