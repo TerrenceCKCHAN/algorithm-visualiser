@@ -27,6 +27,7 @@ function SortingVisualizer() {
             />
           ))
         }
+        <br/>
         <button onClick={() => (setArray(resetArray()))}
         >
           New Array
