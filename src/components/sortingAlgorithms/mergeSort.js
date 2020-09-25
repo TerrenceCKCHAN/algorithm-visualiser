@@ -48,7 +48,6 @@ export default function getAnimations(array) {
   // returns a list of animations from merge sort that we will use to animate our algorithm
   const animations = [];
   const auxArray = array.slice();
-  // TODO Implement helper to sort array using merge sort
-  helper(auxArray);
+  helper(array, auxArray, 0, array.length - 1, animations);
   return animations;
 }
