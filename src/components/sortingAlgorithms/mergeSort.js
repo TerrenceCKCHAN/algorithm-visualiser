@@ -1,9 +1,3 @@
-function helper(auxArray) {
-  // TODO Implement merge sort here
-  console.log(auxArray);
-  return -1;
-}
-
 function merge(array, start, middle, end, auxArray, animations) {
   let i = start;
   let j = middle + 1;
@@ -38,6 +32,16 @@ function merge(array, start, middle, end, auxArray, animations) {
     j += 1;
     x += 1;
   }
+}
+
+function helper(array, auxArray, start, end, animations) {
+  if (start === end) {
+    return
+  }
+  const middle = Math.floor((start + end) / 2);
+  helper(array, auxArray, start, middle, animations);
+  helper(array, auxArray, middle + 1, end, animations);
+  merge(array, start, middle, end, auxArray, animations);
 }
 
 export default function getAnimations(array) {
