@@ -21,6 +21,8 @@ function merge(array, start, middle, end, auxArray, animations) {
 
   while (i <= middle) {
     animations.push([i, i]);
+    animations.push([i, i]);
+    animations.push([x, auxArray[i]]);
     array[x] = auxArray[i];
     i += 1;
     x += 1;
@@ -28,6 +30,8 @@ function merge(array, start, middle, end, auxArray, animations) {
 
   while (j <= end) {
     animations.push([j, j]);
+    animations.push([j, j]);
+    animations.push([x, auxArray[j]]);
     array[x] = auxArray[j];
     j += 1;
     x += 1;
