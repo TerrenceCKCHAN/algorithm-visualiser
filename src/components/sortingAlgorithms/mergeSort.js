@@ -43,15 +43,21 @@ function helper(array, auxArray, start, end, animations) {
     return
   }
   const middle = Math.floor((start + end) / 2);
-  helper(array, auxArray, start, middle, animations);
-  helper(array, auxArray, middle + 1, end, animations);
+  helper(auxArray, array, start, middle, animations);
+  helper(auxArray, array, middle + 1, end, animations);
   merge(array, start, middle, end, auxArray, animations);
+}
+
+function arrayEquals(arrayA, arrayB) {
+  return arrayA.every((val, index) => val === arrayB[index]);
 }
 
 export default function getAnimations(array) {
   // returns a list of animations from merge sort that we will use to animate our algorithm
+  const sorted = array.slice().sort((a, b) => a - b);
   const animations = [];
   const auxArray = array.slice();
   helper(array, auxArray, 0, array.length - 1, animations);
+  console.log(arrayEquals(sorted, array));
   return animations;
 }

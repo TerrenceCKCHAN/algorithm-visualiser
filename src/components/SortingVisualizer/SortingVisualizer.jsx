@@ -8,7 +8,6 @@ const SECONDARY_COLOR = 'red';
 
 function resetArray() {
   const array = Array.from({ length: 200 }, () => Math.floor(Math.random() * 500));
-  console.log(array);
   return array;
 }
 
@@ -18,9 +17,6 @@ function animate(animations) {
     const isColorChange = i % 3 !== 2;
     if (isColorChange) {
       const [colOneIdx, colTwoIdx] = animations[i];
-      console.log(colOneIdx);
-      console.log(colTwoIdx);
-      console.log("BREAK");
       const colOneStyle = arrayColumns[colOneIdx].style;
       const colTwoStyle = arrayColumns[colTwoIdx].style;
       const color = i % 3 === 0 ? SECONDARY_COLOR : PRIMARY_COLOR;
@@ -63,7 +59,7 @@ function SortingVisualizer() {
         >
           New Array
         </button>
-        <button onClick={() =>animate(mergeSort(array))}
+        <button onClick={() => animate(mergeSort(array))}
         >
           Merge Sort
         </button>
