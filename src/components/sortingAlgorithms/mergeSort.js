@@ -40,7 +40,7 @@ function merge(array, start, middle, end, auxArray, animations) {
 
 function helper(array, auxArray, start, end, animations) {
   if (start === end) {
-    return
+    return;
   }
   const middle = Math.floor((start + end) / 2);
   helper(auxArray, array, start, middle, animations);
